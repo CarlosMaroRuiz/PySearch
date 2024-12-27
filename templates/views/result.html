@@ -1,0 +1,11 @@
+<h2 class="text-black font-md px-4">Resultados de la busqueda</h2>
+   <section class="flex flex-col py-2 px-4 gap-y-2">
+       {% if results %}
+            {% for item in results %}
+                <a href={{item.url}} class="text-blue-500 text-sm">{{item.title}}</a>  <!-- Adjust this line according to the structure of your results -->
+            {% endfor %}
+
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+   </section>
